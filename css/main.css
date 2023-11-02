@@ -1,3 +1,16 @@
-body{
-    background-color: rgb(236, 236, 236);
+body {
+  background-color: rgba(246, 246, 246, 0);
+  margin: 10px;
+}
+
+.box {
+  background-color: rgb(243, 243, 243);
+}
+
+th.project-id {
+  background-color: #b9b9b9;
+}
+
+.rotate-icon {
+  transform: rotate(90deg); /* Rotate the icon 90 degrees */
 }
