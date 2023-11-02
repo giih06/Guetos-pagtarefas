@@ -1,139 +1,218 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Página de tarefas</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="mediaquery.css">
-</head>
-<body>
-    <main>
-        <div id="divBusca">
-            <input type="text" id="txtBusca" placeholder="Buscar..."/>
-            <button id="btnBusca">Buscar</button>
-        </div>
-        <div id="entries"><p>Show 10 entries</p></div>
 
-        <div id="tabela">
-        <table>
-            <tr>
-                <th>ProjectID</th>
-                <th>Projects</th>
-                <th>EST</th>
-                <th>Status</th>
-                <th>Contacts</th>
-            </tr>
-            <tr>
-                <td>A1001</td>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Página de tarefas</title>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+  integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css"
+    integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="css/main.css">
+  </head>
+
+
+<body>
+
+
+
+    <div class="container">
+      <div class="row d-flex justify-content-center">
+
+         <div class="box"></div>
+
+        <div class="table-responsive col col-md-12 mx-auto">
+
+
+          <table class="table table-hover table-bordered w-75 mx-auto" style="font-size: 18px;">
+
+            <thead class="table-dark">
+
+              <tr>
+    
+              </tr>
+
+            </thead>
+
+            <tbody>
+
+
+
+            </tbody>
+
+
+
+
+          </table>
+
+
+
+          <div class="col col-md-12  w-75 mx-auto">
+
+
+          </div>
+
+
+        </div>
+      </div>
+
+
+
+
+
+  </html>
+
+
+    <div class="conatiner">
+      <div class="row">
+
+        <div class="d-flex justify-content-center">
+          <div class="table-responsive col col-sm col-md-12 mx-auto">
+
+
+
+
+          </div>
+
+
+<!-- 
+          <div id="entries">
+            <p>Show 10 entries</p>
+          </div> -->
+
+          <!-- <table class="table w-75 mx-auto table-bordered">
+
+
+            <thead>
+              <tr>
+                <th scope="col">ProjectID</th>
+                <th scope="col">Projects</th>
+                <th scope="col">EST</th>
+                <th scope="col">Status</th>
+                <th scope="col">Contacts</th>
+              </tr>
+            </thead>
+
+            <tbody>
+
+              <tr>
+
+                <th scope="row">A1001</th>
                 <td>
-                    <p>Frontend Design & Framework</p>
-                    <p>Created 14.08.2019</p></td>
+                  <p>Frontend Design & Framework</p>
+                  <p>Created 14.08.2019</p>
+                </td>
                 <td>Completion with: 56%</td>
                 <td>Canceled</td>
-                <td><img src="" alt="foto-perfil"></td>
-            </tr>
-            <tr>
-                <td>A1002</td>
+                <td><img src="" alt="foto-perfil" /></td>
+              </tr>
+
+              <tr>
+                <th scope="row">A1002</th>
                 <td>
-                    <p>DataBase Revamp</p>
-                    <p>Created 18.08.2019</p>
+                  <p>DataBase Revamp</p>
+                  <p>Created 18.08.2019</p>
                 </td>
                 <td>Completion with: 88%</td>
                 <td>Attention!</td>
-                <td><img src="" alt="foto-perfil"></td>
-            </tr>
-            <tr>
-                <td>A1003</td>
+                <td><img src="" alt="foto-perfil" /></td>
+              </tr>
+              <tr>
+
+                <th scope="row">A1003</th>
                 <td>AngularJS UI design and development</td>
                 <td>Completion with: 36%</td>
                 <td>Delivered</td>
-                <td><img src="" alt="foto-perfil"></td>
-            </tr>
-            <tr>
-                <td>A1004</td>
+                <td><img src="" alt="foto-perfil" /></td>
+              </tr>
+              <tr>
+                <th scope="row">A1004</th>
                 <td>
-                    <p>Brick factory</p>
-                    <p>Created 22.11.2020</p>
+                  <p>Brick factory</p>
+                  <p>Created 22.11.2020</p>
                 </td>
                 <td>Completion with: 64:</td>
                 <td>Attention!</td>
-                <td><img src="" alt="foto-perfil"></td>
-            </tr>
-            <tr>
-                <td>A1005</td>
+                <td><img src="" alt="foto-perfil" /></td>
+              </tr>
+              <tr>
+                <th scope="row">A1005</th>
                 <td>
-                    <p>Car Industry Studies</p>
-                    <p>Created 14.01.2020</p>
+                  <p>Car Industry Studies</p>
+                  <p>Created 14.01.2020</p>
                 </td>
                 <td>Completion with: 74%</td>
                 <td>In Progress</td>
-                <td><img src="" alt="foto-perfil"></td>
-            </tr>
-            <tr>
-                <td>A1006</td>
+                <td><img src="" alt="foto-perfil" /></td>
+              </tr>
+              <tr>
+                <th scope="row">A1006</th>
                 <td>
-                    <p>Create filters and directives</p>
-                    <p>Created 18.03.2020</p>
+                  <p>Create filters and directives</p>
+                  <p>Created 18.03.2020</p>
                 </td>
                 <td>Completion with: 38%</td>
                 <td>In Progress</td>
-                <td><img src="" alt="foto-perfil"></td>
-            </tr>
-            <tr>
-                <td>A1007</td>
-                <td>IT Room Renovation
-                    <p>IT Room Renovation</p>
-                    <p>Created 27.03.2020</p>
+                <td><img src="" alt="foto-perfil" /></td>
+              </tr>
+              <tr>
+                <th scope="row">A1007</th>
+                <td>
+                  IT Room Renovation
+                  <p>IT Room Renovation</p>
+                  <p>Created 27.03.2020</p>
                 </td>
                 <td>Completion with: 95%</td>
                 <td>Attemp #1</td>
-                <td><img src="" alt="foto-perfil"></td>
-            </tr>
-            <tr>
-                <td>A1008</td>
+                <td><img src="" alt="foto-perfil" /></td>
+              </tr>
+              <tr>
+                <th scope="row">A1008</th>
                 <td>
-                    <p>Phase 1: Modual implementations</p>
-                    <p>Created 31.07.2020</p>
+                  <p>Phase 1: Modual implementations</p>
+                  <p>Created 31.07.2020</p>
                 </td>
                 <td>Completion with 15%</td>
                 <td>Delivered</td>
-                <td><img src="" alt="foto-perfil"></td>
-            </tr>
-            <tr>
-                <td>A1009</td>
+                <td><img src="" alt="foto-perfil" /></td>
+              </tr>
+              <tr>
+                <th scope="row">A1009</th>
                 <td>
-                    <p>Phase 2: Beta testing</p>
-                    <p>Created 07.04.2020</p>
+                  <p>Phase 2: Beta testing</p>
+                  <p>Created 07.04.2020</p>
                 </td>
                 <td>Completion with: 88%</td>
                 <td>Attention!</td>
-                <td><img src="" alt="foto-perfil"></td>
-            </tr>
-            <tr>
-                <td>A1010</td>
+                <td><img src="" alt="foto-perfil" /></td>
+              </tr>
+              <tr>
+                <th scope="row">A1010</th>
                 <td>
-                    <p>Phase 3: Deploy to managment</p>
-                    <p>Created 11.04.2020</p>
+                  <p>Phase 3: Deploy to managment</p>
+                  <p>Created 11.04.2020</p>
                 </td>
                 <td>Completion with: 65%</td>
                 <td>Canceled</td>
-                <td><img src="" alt="foto-perfil"></td>
-            </tr>
-            <tr>
-                <th>Project ID</th>
-                <th>Projects</th>
-                <th>EST</th>
-                <th>Status</th>
-                <th>Contacts</th>
-            </tr>
-        </table>
-        </div>
+                <td><img src="" alt="foto-perfil" /></td>
+              </tr>
 
-        <div id="aside">
-            <p>Showing 1 to 10 entries</p>
-            <p>1 2</p>
+            </tbody>
+          </table> -->
+
         </div>
-    </main>
+      </div>
+    </div>
+  
+    
+  
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+  integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+
+  <script src="js/main.js" ></script>
 </body>
+
 </html>
