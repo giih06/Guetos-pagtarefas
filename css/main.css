@@ -14,3 +14,9 @@ th.project-id {
 .rotate-icon {
   transform: rotate(90deg); /* Rotate the icon 90 degrees */
 }
+
+img {
+  border-radius: 50px;
+  width: 25px;
+  height: 25px;
+}

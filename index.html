@@ -42,6 +42,20 @@
                   />
                 </div>
               </div>
+
+              <div class="form-group">
+                <div class="col-md-2">
+                  <input
+                    type="number"
+                    id="valor"
+                    class="form-control input-md"
+                  />
+                </div>
+                <button class="btn btn-primary" onclick="generateProjects()">
+                  Confirmar
+                </button>
+              </div>
+
               <div class="col-md-12">
                 <table class="table mt-3 table-bordered border col-12">
                   <thead class="table-borderless">
@@ -74,9 +88,12 @@
                         "Attention!",
                       ];
 
-                      // Loop para gerar projetos aleatórios
+                      // Função para gerar projetos aleatórios
                       async function generateProjects() {
-                        for (let i = 1; i <= 10; i++) {
+                        const valor = document.getElementById("valor").value;
+                        projetos.length = 0; // Limpa a matriz de projetos
+
+                        for (let i = 1; i <= valor; i++) {
                           const projeto = {
                             ProjectID: `${i}`,
                             Projects: `Projeto ${i}`,
@@ -85,35 +102,52 @@
                               statusOptions[
                                 Math.floor(Math.random() * statusOptions.length)
                               ],
+                            CatImages: [],
                           };
+
+                          for (
+                            let j = 0;
+                            j < Math.floor(Math.random() * 11);
+                            j++
+                          ) {
+                            const catImageResponse = await fetch(
+                              "https://api.thecatapi.com/v1/images/search"
+                            );
+                            const catImageData = await catImageResponse.json();
+                            projeto.CatImages.push(catImageData[0].url); // URL da imagem de gatinho
+                          }
                           projetos.push(projeto);
                         }
                         displayProjectsInTable(projetos);
                       }
 
-                      generateProjects();
-
                       // Função para exibir os projetos na tabela
-                      function displayProjectsInTable(projetos) {
+                      async function displayProjectsInTable(projetos) {
+                        const tbody = document.querySelector("tbody");
+                        tbody.innerHTML = ""; // Limpa o conteúdo atual da tabela
+
                         projetos.forEach((projeto, index) => {
-                          document.write("<tr>");
-                          document.write(
-                            `<th scope="row">${projeto.ProjectID}</th>`
-                          );
-                          document.write("<td>");
-                          document.write(`<p>${projeto.Projects}</p>`);
-                          document.write(
-                            `<img src="${projeto.CatImage}" alt="Cat" />`
-                          );
-                          document.write(`</td>`);
-                          document.write(
-                            `<td>Completion with: ${projeto.EST}% <div class="progress"><div class="progress-bar" role="progressbar" style="width: ${projeto.EST}%" aria-valuenow="${projeto.EST}" aria-valuemin="0" aria-valuemax="100"></div></div></td>`
-                          );
-                          document.write(`<td>${projeto.Status}</td>`);
-                          document.write("<td>");
-                          document.write(`</div>`);
-                          document.write(`</td>`);
-                          document.write("</tr>");
+                          const row = document.createElement("tr");
+                          row.innerHTML = `
+                          <th scope="row">${projeto.ProjectID}</th>
+                          <td>
+                            ${projeto.Projects}<br />
+                      
+                          </td>
+                          <td>Completion with: ${
+                            projeto.EST
+                          }% <div class="progress"><div class="progress-bar" role="progressbar" style="width: ${
+                            projeto.EST
+                          }%" aria-valuenow="${
+                            projeto.EST
+                          }" aria-valuemin="0" aria-valuemax="100"></div></div></td>
+                          <td>${projeto.Status}</td>
+                          <td>
+                                  ${projeto.CatImages.map(
+                                    (catImage) => `<img src="${catImage}" />`
+                                  ).join("")}</td>
+                          `;
+                          tbody.appendChild(row);
                         });
                       }
                     </script>
