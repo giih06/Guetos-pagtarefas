@@ -20,3 +20,9 @@ img {
   width: 25px;
   height: 25px;
 }
+.progress-bar {
+  background-color: rgb(123, 82, 123);
+}
+.small-input {
+  width: 40px;
+}
